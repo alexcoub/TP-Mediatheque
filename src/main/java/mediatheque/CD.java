@@ -15,6 +15,10 @@ public class CD extends Item {
 	public void setNumberOfTracks(int numberOfTracks) {
 		this.numberOfTracks = numberOfTracks;
 	}
+        public void accept (ItemVisitor v){
+            v.visit(this);
+        }
+
 
 	@Override
 	public String toString() {
